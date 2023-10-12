@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy',sans-serif;
+    /* outline: 2px solid greenyellow; */
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#back{
+    width: 100%;
+    height: 100%;
+    
+}
+#back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+#front{
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#workingarea{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1920px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#nav{
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+#menu{
+    display: none;
+}
+#nav img{
+    height: 60px;
+}
+#nleft, #nright{
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+
+}
+#nav a{
+    pointer-events: all;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'gilroy';
+    font-size: 2.2vmin;
+    font-weight: 600;
+}
+#hero{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#heroleft{
+    min-width: 50%;
+    flex-direction: column;
+    justify-content: center;
+}
+#heroleft .elem{
+    height: 9vw;
+    overflow: hidden;
+
+}
+#heroleft .elem h1{
+    line-height: 0.9;
+    font-family: 'kajiro';
+    color: #fff;
+    font-size: 11vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    
+}
+
+#heroleft button{
+    pointer-events: all;
+    padding: 0.9vw;
+    font-size: 2vw;
+    margin-top: 2vw;
+    font-size: 'kajiro';
+    border: none;
+    border-radius: 10px;
+    
+}
+#heroright{
+    min-width: 25%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#heroright p{
+    text-align: right;
+    font-size: 2.5vmin;
+    font-weight: 300;
+    margin-bottom: 3vw;
+}
+#heroright #imagediv{
+    width: 15vw;
+    background-image: url('https://images.unsplash.com/photo-1544031100-42d143bc3037?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 10vw;
+    border-radius: 12px;
+    margin-bottom: 2vw;
+}
+#heroright p:nth-child(4){
+    margin-bottom: 2vw;
+}
+
+
+@media  screen and (max-width:400px) {
+    #nleft a, #nright  a{
+        display: none;
+    }
+    #menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        align-items: flex-end;
+        right: 0;
+        padding: 10px;
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+    }
+    .ri-menu-3-line{
+        pointer-events: all;
+        padding: 10px;
+        background-color: rgba(165, 165, 165, 0.61);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    #menu a{
+        padding: 10px;
+        background-color: rgba(165, 165, 165, 0.61);
+        margin-bottom: 10px;
+        border-radius: 8px;
+        display: none;
+    }
+    #hero{
+        display: flex;
+        flex-direction: column;
+    }
+    #heroleft{
+        width: 100%;
+        padding-bottom: 1vh;
+        border-bottom: 2px solid #fff;
+
+    }
+    #heroleft .elem{
+        height: 20vw;
+        overflow: hidden;
+    }
+    #heroleft .elem h1{
+        line-height: 0.9;
+        font-family: 'kajiro';
+        color: #fff;
+        font-size: 25vw;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+    #heroleft button{
+        pointer-events: all;
+        padding: 2vw;
+        font-size: 2vw;
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+        font-size: 'kajiro';
+        border: none;
+        border-radius: 2;  
+    }
+    #heroright{
+        margin-top: 4vh;
+        padding-top: 2vh;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    #heroright #imagediv{
+        width: 28vmin;
+        background-image: url('https://images.unsplash.com/photo-1544031100-42d143bc3037?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+        background-size: cover;
+        height: 21vmin;
+        background-repeat: no-repeat;
+        margin-bottom: 2vh;
+        border-radius: 8px;
+    }
+    #heroright p{
+        text-align: center;
+        font-size: 2.5vmin;
+        font-weight: 300;
+        margin-bottom: 3vw;
+    }
+}
